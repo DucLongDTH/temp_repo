@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:ionmobile/app_controller.dart';
 import 'package:ionmobile/constants/theme_provider.dart';
 import 'package:ionmobile/modules/widgets/utils.dart';
 
-import '../../constants/R.dart';
 
 class IonPhoneField extends StatelessWidget {
   final TextEditingController textEditingController;
@@ -45,6 +42,7 @@ class IonPhoneField extends StatelessWidget {
       showCountryFlag: false,
       showDropdownIcon: false,
       decoration: inputDecorationTextField(
+          hintText: '812 9606 106',
           contentPadding: EdgeInsets.zero,
           focusNode: focusNode,
           textEditingController: textEditingController,

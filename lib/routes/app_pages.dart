@@ -12,8 +12,6 @@ import '../modules/personal/bindings/personal_binding.dart';
 import '../modules/personal/views/personal_view.dart';
 import '../modules/provide_fullname/bindings/provide_fullname_binding.dart';
 import '../modules/provide_fullname/views/provide_fullname_view.dart';
-import '../modules/provide_name/bindings/provide_name_binding.dart';
-import '../modules/provide_name/views/provide_name_view.dart';
 import '../modules/select_language/bindings/select_language_binding.dart';
 import '../modules/select_language/views/select_language_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
@@ -87,11 +85,6 @@ class AppPages {
       name: _Paths.PROVIDE_FULLNAME,
       page: () => ProvideFullnameView(),
       binding: ProvideFullnameBinding(),
-    ),
-    GetPage(
-      name: _Paths.PROVIDE_NAME,
-      page: () => ProvideNameView(),
-      binding: ProvideNameBinding(),
     ),
   ];
 }

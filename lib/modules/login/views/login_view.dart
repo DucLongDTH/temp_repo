@@ -2,9 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:ionmobile/constants/theme_provider.dart';
 import 'package:ionmobile/modules/widgets/ion_button.dart';
+import 'package:ionmobile/modules/widgets/ion_text_field.dart';
 import 'package:ionmobile/modules/widgets/utils.dart';
 
 import '../../../constants/R.dart';
@@ -36,7 +36,7 @@ class LoginView extends GetView<LoginController> {
                         onPressed: () {
                           controller.login();
                         },
-                        title: 'Login',
+                        title: 'login'.tr,
                         styleButton: IonButtonStyle.fill,
                         isDisable:
                             controller.isDisableButton.value ? true : false,
@@ -77,7 +77,7 @@ class LoginView extends GetView<LoginController> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Mobile Number',
+          'mobile_number'.tr,
           style: TextStyle(
               fontFamily: ThemeProvider.fontRegular,
               fontSize: ThemeProvider.fontSize16),
@@ -105,29 +105,31 @@ class LoginView extends GetView<LoginController> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Email',
+          'email'.tr,
           style: TextStyle(
               fontFamily: ThemeProvider.fontRegular,
               fontSize: ThemeProvider.fontSize16),
         ),
         SizedBox(height: 8),
-        TextFormField(
-          autovalidateMode: AutovalidateMode.disabled,
-          focusNode: controller.focusNodeTextField,
-          onChanged: (String value) {
-            print(value);
-            controller.isValidate.value = true;
-            controller.isDisableButton.value =
-                controller.textcontroller.text.isEmpty;
-          },
-          cursorColor: Colors.white,
-          decoration: inputDecorationTextField(
-              contentPadding: EdgeInsets.only(left: 16),
-              isValidate: controller.isValidate.value,
+        Container(
+          child: Obx(
+            () => IonTextField(
               focusNode: controller.focusNodeTextField,
-              textEditingController: controller.textcontroller),
-          controller: controller.textcontroller,
-          keyboardType: TextInputType.emailAddress,
+              textEditingController: controller.textcontroller,
+              inputDecoration: inputDecorationTextField(
+                  hintText: 'example@gmail.com',
+                  contentPadding: EdgeInsets.only(left: 16),
+                  isValidate: controller.isValidate.value,
+                  focusNode: controller.focusNodeTextField,
+                  textEditingController: controller.textcontroller),
+              onChanged: (value) {
+                controller.isValidate.value = true;
+                controller.isDisableButton.value =
+                    controller.textcontroller.text.isEmpty;
+              },
+              keyboardType: TextInputType.emailAddress,
+            ),
+          ),
         ),
       ],
     );
@@ -139,13 +141,13 @@ class LoginView extends GetView<LoginController> {
       child: Obx(() => controller.isLoginByPhone.value
           ? RichText(
               text: TextSpan(
-                  text: 'Switch to ',
+                  text: 'switch_to'.tr + ' ',
                   style: TextStyle(
                       fontFamily: ThemeProvider.fontRegular,
                       fontSize: ThemeProvider.fontSize16),
                   children: [
                     TextSpan(
-                      text: 'Mobile?',
+                      text: 'mobile?'.tr,
                       style: TextStyle(
                           fontFamily: ThemeProvider.fontBold,
                           fontSize: ThemeProvider.fontSize16),
@@ -158,13 +160,13 @@ class LoginView extends GetView<LoginController> {
             )
           : RichText(
               text: TextSpan(
-                  text: 'Switch to ',
+                  text: 'switch_to'.tr + ' ',
                   style: TextStyle(
                       fontFamily: ThemeProvider.fontRegular,
                       fontSize: ThemeProvider.fontSize16),
                   children: [
                     TextSpan(
-                      text: 'Email?',
+                      text: 'email?'.tr,
                       style: TextStyle(
                           fontFamily: ThemeProvider.fontBold,
                           fontSize: ThemeProvider.fontSize16),

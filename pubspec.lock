@@ -289,7 +289,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "2fe27186b6d6040933eb6df2f97c4b995b52b63a"
+      resolved-ref: "8c124ad7e3b6c4833c52f30d7cc57d9a4d45f925"
       url: "https://github.com/DucLongDTH/phone_field_flutter"
     source: git
     version: "3.1.0"

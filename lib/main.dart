@@ -9,7 +9,7 @@ import 'package:ionmobile/data/services/message_service.dart';
 import 'package:ionmobile/routes/app_pages.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'localizations/location.dart';
-
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Get.put(AppController());
@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
     ));
 
     return GetMaterialApp(
+      navigatorKey: navigatorKey,
       theme: ThemeData.dark(),
       title: "Application",
       initialRoute: AppPages.INITIAL,
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: LocalizationService.fallbackLocale,
       debugShowCheckedModeBanner: false,
       translations: LocalizationService(), // your translations
-      // locale: Locale('id', 'ID'),
+      locale: Locale('en', 'US'),
     );
   }
 

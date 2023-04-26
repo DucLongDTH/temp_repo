@@ -1,11 +1,23 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ProvideFullnameController extends GetxController {
-  //TODO: Implement ProvideFullnameController
+  RxBool isValidate = true.obs;
+  RxBool isDisableButton = true.obs;
+  final TextEditingController firstNameController = TextEditingController();
+  FocusNode focusNodeFirstName = FocusNode();
+  final TextEditingController lastNameController = TextEditingController();
+  FocusNode focusNodeLastName = FocusNode();
 
-  final count = 0.obs;
+  bool isOpenFirstTime = true;
+
+  RxBool isCheckPolicy = true.obs;
+
   @override
   void onInit() {
+    focusNodeFirstName.addListener(() {
+      checkDisableButton();
+    });
     super.onInit();
   }
 
@@ -16,5 +28,13 @@ class ProvideFullnameController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  void checkDisableButton() {
+    var disableButton = true;
+    if (firstNameController.text.isNotEmpty && isCheckPolicy.value == true) {
+      disableButton = false;
+    }
+
+    isDisableButton.value = disableButton;
+  }
 }

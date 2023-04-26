@@ -63,7 +63,6 @@ class VerifyAuthcodeController extends GetxController {
   }
 
   void authenOTP(String v) {
-    // TODO call api authen otp
     if (v == '0000') {
       if (isFlowLogin) {
         Get.offAllNamed(Routes.MAIN);

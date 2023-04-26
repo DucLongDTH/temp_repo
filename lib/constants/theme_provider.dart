@@ -13,10 +13,12 @@ class ThemeProvider {
 
   //FONTSIZE
   static final double fontSize16 = 16;
-
+  static final double fontSize14 = 14;
+  static final double fontSize12 = 12;
 
   // COLOR SCREEN
   static const Color bgScreen = Color(0xFF1F1F1F);
+  static const Color bgBottomSheet = Color(0xFF1B1B1B);
   // COLOR BUTTON
   static const Color bgButtonFill = Color(0xFF24FFFF);
   static const Color bgButtonFillDisable = Color(0xFF1B1B1B);
@@ -29,4 +31,10 @@ class ThemeProvider {
   static const Color textColorButtonOutlineDisable = Color(0xFF545454);
   static const Color borderButtonOutline = Color(0xFF24FFFF);
   static const Color borderButtonOutlineDisable = Color(0xFF545454);
+
+  // TEXT COLOR
+  static const Color colorTextTitle = Color(0xFFFCFCFC);
+  static const Color colorTextTitleDisable = Color(0xFF545454);
+  static const Color colorTextHint = Color(0xFF545454);
+  static const Color colorTextPolicy = Color(0xFF999999);
 }

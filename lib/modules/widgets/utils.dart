@@ -11,6 +11,10 @@ InputDecoration inputDecorationTextField(
     String? hintText}) {
   return InputDecoration(
       hintText: hintText,
+      hintStyle: TextStyle(
+          color: ThemeProvider.colorTextHint,
+          fontFamily: ThemeProvider.fontRegular,
+          fontSize: ThemeProvider.fontSize16),
       contentPadding: contentPadding ?? EdgeInsets.zero,
       suffixIcon: !isValidate
           ? focusNode.hasFocus

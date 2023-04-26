@@ -35,8 +35,8 @@ class AppDio {
       if (error.response?.statusCode == 401) {
         debugPrint(
             '=========================================== onErrorIntercepor 403');
-        final opt = error.response!.requestOptions;
-        await Future.delayed(Duration(seconds: 3));
+        // final opt = error.response!.requestOptions;
+        // await Future.delayed(Duration(seconds: 3));
         // final token = await RefreshToken().refreshToken();
         //// next step: update token in header
         /// retry call with dio

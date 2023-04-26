@@ -6,7 +6,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 class AppController extends SuperController {
   var isUserLogined = false.obs;
-  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
+  // late StreamSubscription<ConnectivityResult> _connectivitySubscription;
   ConnectivityResult _connectionStatus = ConnectivityResult.none;
   final Connectivity _connectivity = Connectivity();
 

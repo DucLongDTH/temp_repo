@@ -5,4 +5,6 @@ class R {
   //SVG
   static final String alertCircle = 'assets/svg/alertCircle.svg';
   static final String removeCircle = 'assets/svg/removeCircle.svg';
+  static final String icCheckbox = 'assets/svg/ic_checkbox.svg';
+  static final String icUncheckbox = 'assets/svg/ic_uncheckbox.svg';
 }
