@@ -1,0 +1,74 @@
+name: ionmobile
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  intl_phone_number_input: ^0.7.2
+  flutter: 
+    sdk: flutter
+  pin_code_fields: ^7.4.0
+  persistent_bottom_nav_bar: ^5.0.2
+  shared_preferences: ^2.0.15
+  flutter_easyloading: 3.0.5
+  intl: ^0.18.1
+  url_launcher: ^6.1.5
+  webview_flutter: ^4.2.0
+  dio: ^5.1.1
+  connectivity_plus: ^3.0.4
+  get_cli: ^1.7.1
+  flutter_svg: ^1.1.6
+  intl_phone_field: 
+    git: 
+      url: https://github.com/DucLongDTH/phone_field_flutter
+      ref: master
+  freezed_annotation: ^2.2.0
+  rxdart: ^0.27.7
+  supabase_flutter: ^1.7.0
+
+
+
+
+
+dev_dependencies: 
+  flutter_lints: ^2.0.1
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - assets/image/
+    - assets/svg/
+  fonts:
+    - family: Oxanium-Bold
+      fonts:
+        - asset: assets/fonts/Oxanium-Bold.ttf
+    - family: Oxanium-ExtraBold
+      fonts:
+        - asset: assets/fonts/Oxanium-ExtraBold.ttf
+    - family: Oxanium-ExtraLight
+      fonts:
+        - asset: assets/fonts/Oxanium-ExtraLight.ttf
+    - family: Oxanium-Light
+      fonts:
+        - asset: assets/fonts/Oxanium-Light.ttf
+    - family: Oxanium-Medium
+      fonts:
+        - asset: assets/fonts/Oxanium-Medium.ttf
+    - family: Oxanium-Regular
+      fonts:
+        - asset: assets/fonts/Oxanium-Regular.ttf
+    - family: Oxanium-SemiBold
+      fonts:
+        - asset: assets/fonts/Oxanium-SemiBold.ttf
+
+
+
+
+
+
+
+
